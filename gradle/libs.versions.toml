@@ -2,9 +2,28 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
-commons-math3 = "3.6.1"
-guava = "33.4.5-jre"
+dbunit = "3.0.0"
+errorprone = "2.40.0"
+errorprone-plugin = "4.1.0"
+guava = "33.4.8-jre"
+jspecify = "1.0.0"
+junit = "5.13.4"
+lombok = "1.18.36"
+nullaway = "0.12.7"
+poi = "5.4.1"
+spotless = "7.2.1"
 
 [libraries]
-commons-math3 = { module = "org.apache.commons:commons-math3", version.ref = "commons-math3" }
+dbunit = { module = "org.dbunit:dbunit", version.ref = "dbunit" }
+errorprone-core = { module = "com.google.errorprone:error_prone_core", version.ref = "errorprone" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
+jspecify = { module = "org.jspecify:jspecify", version.ref = "jspecify" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+nullaway = { module = "com.uber.nullaway:nullaway", version.ref = "nullaway" }
+poi = { module = "org.apache.poi:poi", version.ref = "poi" }
+poi-ooxml = { module = "org.apache.poi:poi-ooxml", version.ref = "poi" }
+
+[plugins]
+errorprone = { id = "net.ltgt.errorprone", version.ref = "errorprone-plugin" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
